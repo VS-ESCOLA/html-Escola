@@ -1,11 +1,13 @@
-/* Paleta de Cores Padrão (Modo Escuro / Tema Halo) */
+/* Paleta de Cores e Tipografia Padrão (Modo Escuro / Tema Halo) */
 :root {
+    --fonte-texto: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --cor-fundo: #12181b;
     --cor-card-fundo: #1a2226;
     --cor-primaria: #4b6b38;      /* Verde Master Chief */
     --cor-secundaria: #2b7a9e;    /* Azul Cortana */
     --cor-secundaria-hover: #3b92bd;
     --cor-texto: #e0e0e0;
+    --cor-contraste: #ffffff;
     --cor-borda: #183C63;
     --cor-fonte-link: #888888;
 }
@@ -18,6 +20,7 @@
     --cor-secundaria: #1b526b;
     --cor-secundaria-hover: #2b7a9e;
     --cor-texto: #1d2125;
+    --cor-contraste: #151428;
     --cor-borda: #cccccc;
     --cor-fonte-link: #555555;
 }
@@ -25,11 +28,24 @@
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
-    font-family: Arial, sans-serif;
+    font-family: var(--fonte-texto);
     line-height: 1.6;
     margin: 0;
     padding: 20px;
     max-width: 100vw;
+}
+
+/* Ajustes de legibilidade para o Tema Escuro */
+.tema-escuro p {
+    color: var(--cor-texto);
+}
+
+.tema-escuro a {
+    color: var(--cor-secundaria);
+}
+
+.tema-escuro header p {
+    color: var(--cor-contraste);
 }
 
 main {
@@ -132,4 +148,16 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     color: var(--cor-fonte-link);
+}
+.btn-tema-escuro {
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    font-size: 24px;
+    padding: 12px;
+    background-color: var(--cor-secundaria);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    line-height: 1;
 }
