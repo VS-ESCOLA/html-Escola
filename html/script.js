@@ -1,4 +1,4 @@
-// 1. Lógica dos botões de reação dos posts (Curtidas)
+// 1. Contador de curtidas individual para cada botão
 const botoes = document.querySelectorAll("main article button");
 
 botoes.forEach(function(botao) {
@@ -10,17 +10,12 @@ botoes.forEach(function(botao) {
     }
 });
 
-// 2. Lógica de alternância do Tema (Modo Escuro / Claro)
+// 2. Alternância do modo claro / escuro
 const btnTemaEscuro = document.querySelector(".btn-tema-escuro");
 
 btnTemaEscuro.addEventListener("click", mudaTema);
 
 function mudaTema() {
     const corpoPagina = document.body;
-
-    if (corpoPagina.classList.contains("tema-claro")) {
-        corpoPagina.classList.remove("tema-claro");
-    } else {
-        corpoPagina.classList.add("tema-claro");
-    }
+    corpoPagina.classList.toggle("tema-claro");
 }
