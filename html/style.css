@@ -1,6 +1,30 @@
+/* Paleta de Cores Padrão (Modo Escuro / Tema Halo) */
+:root {
+    --cor-fundo: #12181b;
+    --cor-card-fundo: #1a2226;
+    --cor-primaria: #4b6b38;      /* Verde Master Chief */
+    --cor-secundaria: #2b7a9e;    /* Azul Cortana */
+    --cor-secundaria-hover: #3b92bd;
+    --cor-texto: #e0e0e0;
+    --cor-borda: #183C63;
+    --cor-fonte-link: #888888;
+}
+
+/* Modo Claro (Inversão para alternar no futuro) */
+.tema-claro {
+    --cor-fundo: #f4f6f8;
+    --cor-card-fundo: #ffffff;
+    --cor-primaria: #2e4720;
+    --cor-secundaria: #1b526b;
+    --cor-secundaria-hover: #2b7a9e;
+    --cor-texto: #1d2125;
+    --cor-borda: #cccccc;
+    --cor-fonte-link: #555555;
+}
+
 body {
-    background-color: #12181b;
-    color: #e0e0e0;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -22,13 +46,13 @@ article {
     align-items: center;
     text-align: center;
     justify-content: center;
-    border: 1px solid #183C63;
+    border: 1px solid var(--cor-borda);
     margin: 16px;
     gap: 16px;
     padding: 16px;
     flex: 1 1 25%;
     border-radius: 8px;
-    background-color: #1a2226;
+    background-color: var(--cor-card-fundo);
 }
 
 article img {
@@ -38,20 +62,20 @@ article img {
 }
 
 h1 {
-    color: #4b6b38;
-    border-bottom: 2px solid #4b6b38;
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-primaria);
     padding-bottom: 5px;
     margin-top: 0;
 }
 
 h2 {
-    color: #2b7a9e;
+    color: var(--cor-secundaria);
     margin-top: 0;
 }
 
 .artigo-autor {
     font-weight: bold;
-    color: #4b6b38;
+    color: var(--cor-primaria);
     margin-bottom: 10px;
 }
 
@@ -61,7 +85,7 @@ h2 {
 
 .artigo-fonte {
     font-size: 0.85rem;
-    color: #888888;
+    color: var(--cor-fonte-link);
     font-style: italic;
     margin-top: 10px;
 }
@@ -73,7 +97,7 @@ h2 {
 }
 
 button {
-    background-color: #2b7a9e;
+    background-color: var(--cor-secundaria);
     color: white;
     border: none;
     padding: 8px 16px;
@@ -84,7 +108,7 @@ button {
 }
 
 button:hover {
-    background-color: #3b92bd;
+    background-color: var(--cor-secundaria-hover);
 }
 
 ul {
@@ -95,7 +119,7 @@ ul {
 }
 
 a {
-    color: #2b7a9e;
+    color: var(--cor-secundaria);
     text-decoration: none;
 }
 
@@ -107,5 +131,5 @@ footer {
     margin-top: 40px;
     text-align: center;
     font-size: 0.9rem;
-    color: #888;
+    color: var(--cor-fonte-link);
 }
